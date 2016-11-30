@@ -5,18 +5,6 @@ import { fetchUsersEpic } from './epics/UsersEpic';
 
 import * as actionTypes from './actionTypes';
 
-
-// const epicsThatRequireAuth = [upcomingVisitsEpic, iAlsoRequireAuthEpic];
-//
-// const requiresAuthEpic = (action$, store) =>
-//   action$.ofType(AUTH_FULFILLED) // when you log in or whatever
-//     .switchMap(() =>
-//       combineEpics(...epicsThatRequireAuth)(action$, store)
-//         .takeUntil(action$.ofType(CANCEL_ALL_THE_THINGS_THAT_REQUIRE_AUTH))
-//     );
-//
-// // etc...
-
 const epicsRequireApi = [fetchUsersEpic]
 
 const requireApiEpics = (action$, store) =>
@@ -25,7 +13,7 @@ const requireApiEpics = (action$, store) =>
       combineEpics(...epicsRequireApi)(action$, store)
         .takeUntil(action$.ofType(actionTypes.CANCEL_ALL_API_REQUESTS))
         .catch(err => {
-          debugger;
+          //debugger;
           return Observable.of({type: actionTypes.CANCEL_ALL_API_REQUESTS, err,  error: true})
         })
   )
