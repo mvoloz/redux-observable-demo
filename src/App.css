@@ -1,0 +1,32 @@
+.App-logo {
+  height: 60px;
+}
+
+.App-logo.spinning {
+  animation: App-logo-spin infinite 20s linear;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+}
+footer {
+  border-top: 1px solid #333;
+}
+
+.pinger {
+  position: relative;
+}
+.bouncingCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ddd;
+  position: absolute;
+}
+
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

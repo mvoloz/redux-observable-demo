@@ -1,0 +1,7 @@
+export const API_SUCCESSFUL           = 'API_SUCCESSFUL'
+export const CANCEL_ALL_API_REQUESTS  = 'CANCEL_ALL_API_REQUESTS'
+export const STATUS_ONLINE            = 'STATUS_ONLINE'
+export const STATUS_OFFLINE           = 'STATUS_OFFLINE'
+export const FETCH_USERS              = 'FETCH_USERS'
+export const FETCH_USER_FULFILLED     = 'FETCH_USER_FULFILLED'
+export const FETCH_USERS_FAILED       = 'FETCH_USERS_FAILED'
